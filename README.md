@@ -1,342 +1,236 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# interview-relational-data-api
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+> A production-grade RESTful data management service built with NestJS 11, Prisma ORM 6, and PostgreSQL 14, featuring OpenAPI/Swagger interactive documentation, declarative DTO validation, and containerized database infrastructure.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Project setup
-
-```bash
-$ pnpm install
-```
-
-## Compile and run the project
-
-```bash
-# development
-$ pnpm run start
-
-# watch mode
-$ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ pnpm run test
-
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ pnpm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-
-
-~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-
-# Project Readme
-
-This project is a Node.js application written in TypeScript. It implements three REST APIs and interacts with a PostgreSQL database. The APIs are hosted on `localhost:{PORT}` and handle data storage, retrieval, and environment variable access. Below is an overview of the requirements, implementation details, and setup instructions.
+**Inception (First Commit):** `2025-01-20` • **Batch / Horizon:** `Batch 2024–2025` • **Architecture Domain:** `Relational Backend / API Data Modeling`
 
 ---
 
-## Features
+## 📌 Architecture & Overview
 
-1. **API to Write Data to the Database**
+`JobInterview_api-data` (internally titled `planetwatch`) is a backend technical interview assessment designed to implement a robust, maintainable, and type-safe REST API for persistent key-value configuration data and environment variable retrieval.
 
-   - Endpoint: `/write`
-   - Method: `POST`
-   - Accepts JSON payload with the following format:
-     ```json
-     {
-       "name": "string",
-       "value": "string",
-       "required": "boolean"
-     }
-     ```
-   - Adds data to the database or fails if the `name` is already present.
-
-2. **API to Read Data from the Database**
-
-   - Endpoint: `/read`
-   - Method: `GET`
-   - Returns all rows from the database in JSON format.
-
-3. **API to Read Custom Variable (`env`)**
-   - Endpoint: `/env`
-   - Method: `GET`
-   - Returns the value of the custom environment variable defined in `constants.ts`.
-
----
-
-## Data Model
-
-- Table Name: `DataTable`
-- Columns:
-  - `id` (Primary Key, Auto Increment)
-  - `DataName` (String, Unique)
-  - `DataValue` (String)
-  - `DataRequired` (Boolean)
-
----
-
-## Technical Details
-
-- **Framework**: NestJS
-- **Language**: TypeScript
-- **Database**: PostgreSQL
-- **Build Tool**: `tsc`
-- **Environment Variables**: Defined in `constants.ts`
-- **ORM**: Prisma
-
----
-
-## Features Implemented
-
-- OpenAPI documentation using Swagger.
-- JSDoc comments for functions.
-- Automatic database table creation and migrations using Prisma.
-- Code linting with ESLint.
-- Input validation using class-validator.
-- REST APIs to update and delete data rows.
-- Configurable port using environment variables.
-- Dockerized PostgreSQL database for easy setup.
-
----
-
-## Project Structure
+The application follows the classic **Layered Clean Architecture** pattern enforced by NestJS modular dependency injection:
 
 ```
-docker/
-├── docker-compose.yaml
-├── docker.env
-prisma/
-├── schema.prisma
-├── migrations/
-src/
-├── app.module.ts
-├── main.ts
-├── modules/
-│ ├── data/
-│ │ ├── data.controller.ts
-│ │ ├── data.service.ts
-│ │ ├── data.module.ts
-│ │ ├── dto/
-│ │ │ ├── create-data.dto.ts
-│ │ │ ├── update-data.dto.ts
-.env
+[ HTTP Client / Swagger UI ]
+              │
+              ▼
+   ┌────────────────────────────────────────────────────────┐
+   │                  HTTP Request Pipeline                 │
+   │  ┌───────────────────────┐  ┌───────────────────────┐  │
+   │  │ ValidationPipe        │  │ GlobalExceptionFilter │  │
+   │  │ (Whitelist/Transform) │  │ (Timestamp, Path, Msg)│  │
+   │  └───────────┬───────────┘  └───────────────────────┘  │
+   └──────────────┼─────────────────────────────────────────┘
+                  ▼
+   ┌────────────────────────────────────────────────────────┐
+   │              DataModule / DataController               │
+   │  (Routes: /data, /data/:name, /data/env)               │
+   └──────────────────────┬─────────────────────────────────┘
+                          ▼
+   ┌────────────────────────────────────────────────────────┐
+   │                      DataService                       │
+   │  (Business Logic, Conflict/NotFound Exception Mapping) │
+   └──────────────┬───────────────────────────┬─────────────┘
+                  │                           │
+                  ▼                           ▼
+   ┌─────────────────────────────┐  ┌───────────────────────┐
+   │        PrismaService        │  │     ConfigService     │
+   │  (PrismaClient PostgreSQL)  │  │ (Process Environment) │
+   └──────────────┬──────────────┘  └───────────────────────┘
+                  ▼
+   ┌─────────────────────────────┐
+   │     PostgreSQL Database     │
+   │      (Table: DataTable)     │
+   └─────────────────────────────┘
+```
+
+### Context & Architectural Highlights
+
+* **Context:** Built as a backend technical assessment simulating a configuration and metadata ingestion microservice for the PlanetWatch ecosystem.
+* **Strict Layer Separation:** Decouples HTTP request routing ([`DataController`](src/modules/data/data.controller.ts)) from database querying and exception translation ([`DataService`](src/modules/data/data.service.ts)) and data persistence abstraction ([`PrismaService`](src/prisma/prisma.service.ts)).
+* **Resilient Startup & Teardown:** Connects to PostgreSQL directly during bootstrapping with explicit error trapping (`prismaService.$connect()`), aborting immediately on connection failure and enabling graceful teardown via `app.enableShutdownHooks()`.
+* **Standardized Error Handling:** Employs a centralized [`GlobalExceptionFilter`](src/filters/http-exception.filter.ts) ensuring all errors—whether HTTP status exceptions or unexpected runtime failures—are logged with timestamps and returned in a unified JSON envelope.
+* **Declarative Request Validation:** All incoming mutations are validated against Data Transfer Objects ([`CreateDataDto`](src/modules/data/dto/create-data.dto.ts) and [`UpdateDataDto`](src/modules/data/dto/update-data.dto.ts)) utilizing `class-validator` and `class-transformer` with strict stripping of non-whitelisted properties.
+
+---
+
+## 🛠 Tech Stack
+
+* **Runtime & Framework:** Node.js (LTS v20 / v22), TypeScript 5.7.3, NestJS 11.0.2 (`@nestjs/core`, `@nestjs/common`, `@nestjs/platform-express`, `@nestjs/config`, `@nestjs/mapped-types`)
+* **Database & ORM:** PostgreSQL 14 (Alpine), Prisma ORM 6.2.1 (`@prisma/client`, `prisma`)
+* **API Documentation:** Swagger / OpenAPI 3.0 (`@nestjs/swagger`, `swagger-ui-express`)
+* **Validation & Transformation:** `class-validator` 0.14.1, `class-transformer` 0.5.1
+* **Testing & Tooling:** Jest 29.7.0, Supertest 7.0.0, ts-jest 29.2.5, ESLint 9.18.0, Prettier 3.4.2
+* **Containerization:** Docker & Docker Compose (PostgreSQL 14 + pgAdmin 4)
+
+---
+
+## ✨ Features & Endpoints
+
+* **Data Entry Ingestion & Conflict Prevention:** Upserts structured configuration records into PostgreSQL with unique name enforcement and Prisma `P2002` to HTTP `409 Conflict` mapping.
+* **Partial Updates via Mapped Types:** Allows dynamic partial patching of `DataValue` or `DataRequired` flags using `UpdateDataDto` derived via `PartialType`.
+* **Safe Deletions:** Deletes records by natural key (`DataName`) with automatic Prisma `P2025` to HTTP `404 Not Found` handling.
+* **Environment Configuration Querying:** Exposes an interface to look up runtime environment variables via `ConfigService`.
+* **Self-Documenting API:** Interactive Swagger documentation accessible at `/api`.
+
+### API Routes & Schema Reference
+
+| Method | Endpoint | Description | Request Body / Params | Status Responses |
+|---|---|---|---|---|
+| `POST` | `/data` | Creates a new record in `DataTable`. | `{ "name": string, "value": string, "required": boolean }` | `201 Created`<br>`400 Bad Request`<br>`409 Conflict` |
+| `GET` | `/data` | Retrieves all records from `DataTable`. | *None* | `200 OK`<br>`500 Internal Error` |
+| `PATCH` | `/data/:name` | Partially updates value or required state by name. | Param: `:name`<br>Body: `{ "value"?: string, "required"?: boolean }` | `200 OK`<br>`400 Bad Request`<br>`404 Not Found` |
+| `DELETE` | `/data/:name` | Deletes a record by name. | Param: `:name` | `200 OK`<br>`404 Not Found` |
+| `GET` | `/data/env` | Reads a runtime environment variable by key. | Query: `?key=<variable_name>` | `200 OK`<br>`400 Bad Request`<br>`404 Not Found` |
+| `GET` | `/api` | OpenAPI / Swagger interactive documentation UI. | *None* | `200 OK` |
+
+#### Data Entity Schema (`prisma/schema.prisma`)
+
+```prisma
+model DataTable {
+  id           Int      @id @default(autoincrement())
+  DataName     String   @unique
+  DataValue    String
+  DataRequired Boolean
+  createdAt    DateTime @default(now())
+}
 ```
 
 ---
 
-## Setup Instructions
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Git
-- Node.js LTS (v22+)
-- Docker
-- pnpm (preferred package manager)
+* **Node.js:** `>= 20.17.0` (LTS v22 recommended)
+* **Package Manager:** `pnpm` (`>= 9.0.0`) or `npm`
+* **Container Engine:** Docker & Docker Compose
 
-### Install Dependencies
+---
 
-`pnpm install`
+### Installation
 
-Set Up Environment Variables Create a .env file in the project root with the following content:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/fabogit/interview-relational-data-api.git
+   cd interview-relational-data-api
+   ```
 
+2. **Install project dependencies:**
+   ```bash
+   pnpm install
+   # or: npm install
+   ```
+
+---
+
+### Environment Configuration
+
+The repository uses two environment configuration files: one for the NestJS application and one for the Dockerized database infrastructure.
+
+1. **Configure Application Environment (`.env`):**
+   Copy the sample environment file to `.env`:
+   ```bash
+   cp ".env copy" .env
+   ```
+
+   Ensure `.env` matches your local database settings:
+   ```env
+   DATABASE_URL="postgresql://myuser:mypassword@localhost:5432/mydatabase?schema=public"
+   PORT=3000
+   VARIABLE="a string"
+   ```
+
+2. **Verify Docker Environment (`docker/docker.env`):**
+   ```env
+   POSTGRES_USER=myuser
+   POSTGRES_PASSWORD=mypassword
+   POSTGRES_DB=mydatabase
+   PGADMIN_DEFAULT_EMAIL=admin@admin.com
+   PGADMIN_DEFAULT_PASSWORD=admin
+   POSTGRES_PORT=5432
+   PGADMIN_PORT=5050
+   ```
+
+---
+
+### Running External Dependencies (PostgreSQL & pgAdmin)
+
+Spin up the containerized database services using Docker Compose:
+
+```bash
+# Start PostgreSQL (port 5432) and pgAdmin (port 5050)
+pnpm run docker:up
+# or: docker-compose -f ./docker/docker-compose.yaml --env-file ./docker/docker.env up -d
 ```
-DATABASE_URL="postgresql://myuser:mypassword@localhost:5432/mydatabase"
-PORT=3000
-VARIABLE="a string"
+
+To stop containers and preserve volume data:
+```bash
+pnpm run docker:down
 ```
 
-### Run Database in Docker
+---
 
-`pnpm run docker up` and `pnpm run docker down`
+### Database Migrations & Prisma Generation
 
-### Generate schema
+Generate the Prisma client and apply existing database migrations:
 
-`pnpm prisma generate`
+```bash
+# Generate the strongly-typed Prisma Client
+npx prisma generate
 
-### Run Migrations
+# Apply migrations to PostgreSQL
+npx prisma migrate dev
+```
 
-`pnpm prisma migrate dev`
+*(Optional)* Launch Prisma Studio to inspect the database via browser:
+```bash
+npx prisma studio
+```
 
-### Start the Server
+---
 
-`pnpm start`
+### Running the Application
 
-## API Endpoints
+```bash
+# Development mode with Hot-Reload / Watch
+pnpm run start:dev
 
-### 1. Create a New Data Entry
+# Standard start
+pnpm run start
 
-- **Endpoint**: `POST /data`
-- **Description**: Adds a new data entry to the database.
-- **Request Body**:
+# Production build and execution
+pnpm run build
+pnpm run start:prod
+```
 
-    ```json
-    {
-    "name": "exampleName",
-    "value": "exampleValue",
-    "required": true
-    }
-    ```
+Once running:
+* **API Server:** `http://localhost:3000`
+* **Swagger API Documentation:** `http://localhost:3000/api`
+* **pgAdmin Dashboard:** `http://localhost:5050` (Login: `admin@admin.com` / `admin`)
 
-- **Responses**:
+---
 
-  - `201 Created`: Data created successfully.
+### Running Tests
 
-  - `400 Bad Request`: Invalid request or server error.
+```bash
+# Execute unit and service-level test suites
+pnpm run test
 
-  - `409 Conflict`: Data with this name already exists.
+# Run tests in watch mode
+pnpm run test:watch
 
-### 2. Get All Data Entries
+# Generate test coverage reports
+pnpm run test:cov
 
-- **Endpoint**: GET /data
-- **Description**: Retrieves all data entries from the database.
-- **Responses**:
+# Execute End-to-End (E2E) integration tests
+pnpm run test:e2e
+```
 
-  - `200 OK`: Returns an array of data entries.
+---
 
-    ```json
-    [
-        {
-        "id": 1,
-        "DataName": "exampleName",
-        "DataValue": "exampleValue",
-        "DataRequired": true
-        }
-    ]
-    ```
+## 📄 License & Author
 
-  - `400 Bad Request`: Server error.
-
-### 3. Update an Existing Data Entry
-
-- **Endpoint**: PATCH /data/:name
-- **Description**: Updates an existing data entry by its name.
-- **Request** Parameters: name (string, path): The name of the data entry to update.
-- **Request** Body:
-
-    ```json
-    {
-    "value": "updatedValue",
-    "required": false
-    }
-    ```
-
-- **Responses**:
-
-  - `200 OK`: Data updated successfully.
-
-  - `400 Bad Request`: Invalid request or server error.
-
-  - `404 Not Found`: Data with the given name does not exist.
-
-### 4. Delete a Data Entry
-
-- **Endpoint**: DELETE /data/:name
-- **Description**: Deletes an existing data entry by its name.
-- **Request Parameters**: name (string, path): The name of the data entry to delete.
-
-- **Responses**:
-
-  - `200 OK`: Data deleted successfully.
-
-  - `400 Bad Request`: Server error.
-
-  - `404 Not Found`: Data with the given name does not exist.
-
-### 5. Get the Value of an Environment Variable
-
-- **Endpoint**: GET /data/env
-- **Description**: Retrieves the value of an environment variable by its key.
-
-- **Request Query**:
-  key (string, query): The key of the environment variable.
-
-- **Responses**:
-
-  - `200 OK`: Returns the value of the requested environment variable.
-
-    ```json
-    {
-        "key": "exampleKey",
-        "value": "exampleValue"
-    }
-    ```
-
-  - `400 Bad Request`: Missing or invalid key query parameter.
-
-  - `404 Not Found`: Environment variable with the given key does not exist.
-
-All REST APIs return JSON responses.
-
-API documentation is available at http://localhost:{PORT}/api.
+Developed by [@fabogit](https://github.com/fabogit).
