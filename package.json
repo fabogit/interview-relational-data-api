@@ -60,7 +60,7 @@
     }
   },
   "license": "UNLICENSED",
-  "name": "planetwatch",
+  "name": "interview-relational-data-api",
   "private": true,
   "scripts": {
     "build": "nest build",
